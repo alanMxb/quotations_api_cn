@@ -6,7 +6,8 @@ ChaoEX科技的行情API中文文档
 
 # baseUrl
 
-* baseUrl:http://60.205.200.93/12lian/
+* baseUrl:http://47.52.70.69/12lian/
+
 * 其他平台需要先进行邮件申请，并开通接口，之后才会开发程序化接口API
 
 # 查询
