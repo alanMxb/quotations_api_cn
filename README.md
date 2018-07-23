@@ -114,6 +114,48 @@ baseCurrencyId|基础币id|int
 }
 
 ```
+### 获取实时行情(第二版，最新)
+
+- request_url：baseUrl + quote/v2/realTime
+- method：GET
+- parameter：
+
+|Item      |description  |type   |
+| -------- | :-----:|  :-------:  |
+|coins|	(基础币英文+ '_' + 交易币种英文)，大小写不限，如eth_wicc|	string|
+
+- response_data:
+
+|Item      |description  |type   |
+| -------- | :-----:|  :-------:  |
+|buy	|买一价|	BigDecimal|
+|high	|最高价|	BigDecimal|
+|last	|最新成交价|	BigDecimal|
+|low	|最低价|	BigDecimal|
+|sell	|卖一价|	BigDecimal|
+|vol	|交易币成交量|	BigDecimal|
+|currencyId|	交易币id|	int|
+|baseCurrencyId|	基础币id	|int|
+
+- response description：当接口返回的status 为200时，则attachment包含以下数据，如果status参数不为200 ，则出现异常。
+- example：
+
+```
+{
+    "attachment": {
+    "buy": 9.276E-4,
+    "high": 9.752E-4,
+    "last": 9.752E-4,
+    "low": 9.1238E-4,
+    "sell": 9.752E-4,
+    "vol": 469150.128743,
+    "currencyId": 67,
+    "baseCurrencyId": 3
+    },
+    "message": null,
+    "status": 200
+}
+```
 
 ## 获取交易深度
 
